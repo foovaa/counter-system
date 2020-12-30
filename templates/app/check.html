@@ -1,0 +1,46 @@
+{% extends 'template.html' %}
+
+
+{% block content %}
+<main class="main">
+  
+    <br><br>
+    <form action="#" method="post" target="_blank">
+        <!-- <h2>ثبت نام کارت ملی</h2> -->
+        <h2>پیگیری وضعیت کارت ملی</h2>
+        <div class="clearfix">
+    
+            <div class="col-25">
+                <label for="fname">کد ملی متقاضی</label>
+            </div>
+            
+            <div class="col-75">
+                <input id="fname" type="text" name="fname" placeholder=" کد ملی متقاضی" required>
+            </div>
+        </div>
+
+        
+        <div class="clearfix">
+            <div class="col-25">
+                <label for="lname">شماره پیگیری</label>
+            </div>
+            
+            <div class="col-75">
+                <input id="lname" type="text" name="lname" placeholder="شماره پیگیری" required>
+            </div>
+        </div>
+    
+        <div class="clearfix">
+            <div>
+                <input type="submit" value="جستوجو">
+            </div>
+        </div>
+        
+    </form>
+
+
+</main>
+
+
+{% endblock content %}
+    

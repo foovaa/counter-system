@@ -1,0 +1,113 @@
+{% extends 'template.html' %}
+
+
+{% block content %}
+<main class="main">
+  
+    <br><br>
+    <form action="#" method="post" target="_blank">
+        <h2>ثبت نام کارت ملی</h2>
+        <div class="clearfix">
+            <div class="col-25">
+                <label for="fname">بارگذاری تصویر</label>
+            </div>
+            <div class="col-75">
+                <div class="avatar-upload">
+                    <div class="avatar-edit">
+                        <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                        <label for="imageUpload" title="بارگذاری تصویر"></label>
+                    </div>
+                    <div class="avatar-preview">
+                        {% load static %}
+                        <div id="imagePreview" style="background-image: url('{% static 'img/default.png' %}')">
+                        </div>
+                    </div>
+                </div>
+                <ul>
+                    <li>عکس باید اینجوری باشد</li>
+                    <li>عکس باید اونجوری باشد</li>
+                </ul>
+
+            </div>
+        </div>
+    
+        <div class="clearfix">
+    
+            <div class="col-25">
+                <label for="fname">نام</label>
+            </div>
+            
+            <div class="col-75">
+                <input id="fname" type="text" name="fname" placeholder=" نام" required>
+            </div>
+        </div>
+
+        
+        <div class="clearfix">
+            <div class="col-25">
+                <label for="lname">نام خانوادگی</label>
+            </div>
+            
+            <div class="col-75">
+                <input id="lname" type="text" name="lname" placeholder="نام خانوادگی" required>
+            </div>
+        </div>
+        <div class="clearfix">
+            <div class="col-25">
+                <label for="lname">تاریخ تولد</label>
+            </div>
+            
+            <div class="col-75">
+                <input id="lname" type="text" name="lname" class="example1" placeholder="تاریخ تولد" required>
+            </div>
+        </div>
+        
+        <div class="clearfix">
+            <div class="col-25">
+                <label for="email">ایمیل</label>
+            </div>
+            
+            <div class="col-75">
+                <input id="email" type="email" name="email" placeholder="ایمیل" required>
+            </div>
+        </div>
+        
+        <div class="clearfix">
+            <div class="col-25">
+                <label for="subject">استان</label>
+            </div>
+            
+            <div class="col-75">
+                <select id="subject" name="subject" required>
+                    <option value="work" disabled selected>استان</option>
+                    <option value="work">همدان</option>
+                    <option value="help">تهران</option>
+                    <option value="general">سیستان</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="clearfix">
+            <div class="col-25">
+                <label for="message">آدرس</label>
+            </div>
+            
+            <div class="col-75">
+                <textarea id="message" name="message" placeholder="آدرس" required></textarea>
+            </div>
+        </div>
+        
+        <div class="clearfix">
+            <div>
+                <input type="submit" value="ثبت">
+            </div>
+        </div>
+        
+    </form>
+
+
+</main>
+
+
+{% endblock content %}
+    

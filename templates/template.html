@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/persian-datepicker.css' %}"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="grid">
+
+        <header class="header">
+  
+          <i id="menu_toggle" class="fas fa-bars header__menu"></i>
+  
+        </header>
+  
+          <aside class="sidenav">
+            <div class="sidenav__brand">
+                  <a href="#">پیشخوان خدمات دولت </a>
+                  <i class="fas fa-times sidenav__brand-close"></i>
+              
+            </div>
+            <div class="sidenav__profile">
+              <div class="sidenav__profile-avatar"></div>
+              <div class="sidenav__profile-title text-light">اوپراتور ۱۲۳</div>
+            </div>
+            <div class="row row--align-v-center row--align-h-center">
+              <ul class="navList">
+                <li class="navList__heading">کارت ملی<i class="fa fa-id-card"></i></li>
+                <li>
+                  <div class="item-title">
+                    <span class="navList__subheading-title"><a href="{% url 'app:national_card' %}"> ثبت نام</a></span>
+                  </div>
+                  <div class="item-title">
+                    <span class="navList__subheading-title"><a href="{% url 'app:check' %}"> استعلام</a></span>
+                  </div>
+              </li>
+              
+              <li class="navList__heading">گذرنامه<i class="fas fa-passport"></i></li>
+                <li>
+                  <div class="item-title">
+                    <span class="navList__subheading-title"><a href="{% url 'app:passport' %}"> ثبت نام</a></span>
+                  </div>
+                  <div class="item-title">
+                    <span class="navList__subheading-title"><a href="{% url 'app:check' %}"> استعلام</a></span>
+                  </div>
+              </li>
+              
+  
+              <li class="navList__heading">گواهینامه<i class="far fa-certificate" aria-hidden="true"></i></li>
+                <li>
+                  <div class="item-title">
+                    <span class="navList__subheading-title"><a href="{% url 'app:car_license' %}"> ثبت نام</a></span>
+                  </div>
+                  <div class="item-title">
+                    <span class="navList__subheading-title"><a href="{% url 'app:check' %}"> استعلام</a></span>
+                  </div>
+              </li>
+              
+  
+              <li class="navList__heading">خلافی خودرو<i class="far fa-car"></i></li>
+                <li>
+                  <div class="item-title">
+                    <span class="navList__subheading-title"><a href="{% url 'app:check' %}"> استعلام</a></span>
+                  </div>
+              </li>
+              <br><br>
+              <hr>
+              <br>
+              <li class="exit_item" >
+                خروج<i class="fa fa-sign-out"></i>
+              </li>
+  
+  
+              <div class="footer">
+                  <p>صادق ایپکی جو</p><br>
+                  <p>مصطفی مرادی</p><br>
+              </div>
+          </ul>
+          </div>
+  
+          </aside>
+  
+
+        {% block content %}{% endblock content %}
+          <!-- <footer class="footer">
+            <p><span class="footer__copyright">&copy;</span> 2018 MTH</p>
+            <p>Crafted with <i class="fas fa-heart footer__icon"></i> by <a href="https://www.linkedin.com/in/matt-holland/" target="_blank" class="footer__signature">Matt H</a></p>
+          </footer> -->
+    </div> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      {% load static %}
+	  <script src="{% static 'js/persian-date.js' %}"></script>
+	  <script src="{% static 'js/persian-datepicker.js' %}"></script>
+	  <script language="JavaScript" type="text/javascript" src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
